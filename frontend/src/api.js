@@ -1,5 +1,5 @@
+const BASE = "https://red-planet-rescue.onrender.com";
 
-const BASE = import.meta.env.VITE_API_BASE_URL || "";
 async function request(path, method = "GET", body) {
   const response = await fetch(`${BASE}${path}`, {
     method,
