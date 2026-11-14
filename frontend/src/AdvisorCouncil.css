@@ -1,0 +1,384 @@
+.advisor-page {
+  min-height: 100vh;
+  background: #10151b;
+  color: #f5f1eb;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+/* NAVIGATION */
+
+.advisor-navbar {
+  height: 75px;
+  padding: 0 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  background: #171d24;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.advisor-back-button {
+  background: transparent;
+  border: 1px solid #56c5ed;
+  color: #56c5ed;
+  padding: 9px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+
+.advisor-back-button:hover {
+  background: #56c5ed;
+  color: #10151b;
+}
+
+.advisor-logo {
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  white-space: nowrap;
+}
+
+.advisor-nav-label {
+  color: #b3bac2;
+  font-size: 11px;
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+
+/* HEADER */
+
+.advisor-header {
+  padding: 55px 8%;
+  background:
+    linear-gradient(90deg, rgba(17, 20, 25, 0.95), rgba(17, 20, 25, 0.75)),
+    url("/mars-explorer.jpg") center 45% / cover no-repeat;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+}
+
+.advisor-tag {
+  color: #f28b54;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 2.5px;
+  margin-bottom: 15px;
+}
+
+.advisor-header h1 {
+  font-size: clamp(32px, 5vw, 52px);
+  margin: 0;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.advisor-header h1 span {
+  color: #f17c45;
+}
+
+.advisor-subtitle {
+  max-width: 600px;
+  color: #d0d0d0;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.advisor-overall {
+  min-width: 150px;
+  padding: 16px 22px;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid;
+}
+
+.advisor-overall span {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  margin-bottom: 6px;
+  color: #c9d0d7;
+}
+
+.advisor-overall strong {
+  font-size: 26px;
+  letter-spacing: 1px;
+}
+
+.advisor-overall.low {
+  border-color: #4c8c66;
+  background: rgba(75, 190, 120, 0.12);
+  color: #65d99a;
+}
+
+.advisor-overall.medium {
+  border-color: #b98f35;
+  background: rgba(240, 188, 85, 0.12);
+  color: #f0bc55;
+}
+
+.advisor-overall.high {
+  border-color: #a94e4e;
+  background: rgba(255, 80, 80, 0.12);
+  color: #ff7777;
+}
+
+/* MISSION STATE CONTROLS */
+
+.advisor-state {
+  margin: 35px 8% 0;
+  padding: 25px;
+  background: #1c252e;
+  border: 1px solid #303b46;
+  border-radius: 14px;
+}
+
+.advisor-state-heading h2 {
+  margin: 0 0 6px;
+  font-size: 15px;
+  letter-spacing: 1.5px;
+}
+
+.advisor-state-heading p {
+  margin: 0 0 22px;
+  color: #a8b0b8;
+  font-size: 12px;
+}
+
+.advisor-sliders {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 22px;
+}
+
+.advisor-slider {
+  display: block;
+}
+
+.advisor-slider-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  margin-bottom: 10px;
+  color: #d5dbe1;
+}
+
+.advisor-slider-top strong {
+  color: #f17c45;
+}
+
+.advisor-slider input[type="range"] {
+  width: 100%;
+  accent-color: #e77845;
+  cursor: pointer;
+}
+
+.advisor-slider select {
+  width: 100%;
+  padding: 9px;
+  background: #10151b;
+  color: #f5f1eb;
+  border: 1px solid #4a5560;
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+/* ADVISOR CARDS */
+
+.advisor-section {
+  padding: 30px 8% 50px;
+}
+
+.advisor-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.advisor-card {
+  background: #1c252e;
+  border: 1px solid #303b46;
+  border-radius: 14px;
+  padding: 26px;
+  transition: 0.3s;
+}
+
+.advisor-card:hover {
+  transform: translateY(-4px);
+  border-color: #d7774d;
+}
+
+.advisor-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.advisor-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  font-size: 26px;
+  background: rgba(231, 120, 69, 0.15);
+}
+
+.advisor-risk {
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 7px 11px;
+  border-radius: 20px;
+}
+
+.advisor-risk.low {
+  color: #65d99a;
+  background: rgba(75, 190, 120, 0.12);
+}
+
+.advisor-risk.medium {
+  color: #f0bc55;
+  background: rgba(240, 188, 85, 0.12);
+}
+
+.advisor-risk.high {
+  color: #ff7777;
+  background: rgba(255, 80, 80, 0.12);
+}
+
+.advisor-card h3 {
+  font-size: 21px;
+  margin: 18px 0 4px;
+}
+
+.advisor-focus {
+  margin: 0 0 20px;
+  font-size: 12px;
+  color: #a8b0b8;
+}
+
+.advisor-label {
+  margin: 0 0 6px;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: #e88a5b;
+  font-weight: bold;
+}
+
+.advisor-recommendation {
+  margin: 0 0 18px;
+  font-size: 15px;
+  line-height: 1.6;
+  font-weight: bold;
+}
+
+.advisor-reason {
+  margin: 0 0 20px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #b9c0c7;
+}
+
+.advisor-meter {
+  height: 7px;
+  background: #343f49;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.advisor-meter-fill {
+  height: 100%;
+  border-radius: 20px;
+  transition: width 0.4s ease;
+}
+
+.advisor-meter-fill.low {
+  width: 33%;
+  background: #5bd58b;
+}
+
+.advisor-meter-fill.medium {
+  width: 66%;
+  background: #f0bc55;
+}
+
+.advisor-meter-fill.high {
+  width: 100%;
+  background: #ff6b6b;
+}
+
+/* FOOTER */
+
+.advisor-footer {
+  background: #171d24;
+  border-top: 1px solid #303943;
+  padding: 30px 15px;
+  text-align: center;
+}
+
+.advisor-footer h3 {
+  font-size: 17px;
+  letter-spacing: 1px;
+}
+
+.advisor-footer p {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: #aeb6bf;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+  .advisor-sliders {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .advisor-navbar {
+    padding: 0 5%;
+    height: 65px;
+  }
+
+  .advisor-logo {
+    font-size: 13px;
+  }
+
+  .advisor-nav-label {
+    display: none;
+  }
+
+  .advisor-back-button {
+    padding: 7px 10px;
+    font-size: 9px;
+  }
+
+  .advisor-header {
+    padding: 40px 6%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .advisor-state {
+    margin: 25px 6% 0;
+  }
+
+  .advisor-sliders,
+  .advisor-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .advisor-section {
+    padding: 25px 6% 40px;
+  }
+}

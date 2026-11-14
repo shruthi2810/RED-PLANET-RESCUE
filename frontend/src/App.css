@@ -1,0 +1,595 @@
+/* GENERAL */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #25130e;
+  color: white;
+}
+
+.app {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* NAVBAR */
+
+.navbar {
+  height: 85px;
+  padding: 0 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #21120e;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  position: relative;
+  z-index: 5;
+}
+
+.logo {
+  color: #ff7045;
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.nav-right {
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: #f6d3c0;
+}
+
+/* HERO SECTION */
+
+.hero {
+  height: calc(100vh - 85px);
+  height: calc(100svh - 85px);
+  min-height: 610px;
+
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  background-image: url("/mars-background.jpg");
+  background-size: cover;
+  background-position: center 55%;
+  background-repeat: no-repeat;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(35, 12, 5, 0.18),
+    rgba(55, 18, 7, 0.20) 55%,
+    rgba(28, 12, 8, 0.72)
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  padding: 24px 20px 34px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: clamp(38px, 5.7vw, 76px);
+  font-weight: 900;
+  line-height: 1.08;
+  color: white;
+
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+}
+
+.hero h1 span {
+  color: #ff7045;
+}
+
+.hero-description {
+  font-size: clamp(15px, 1.5vw, 20px);
+  margin-top: 20px;
+  color: white;
+
+  text-shadow: 0 2px 8px black;
+}
+
+/* STATISTICS */
+
+.mission-stats {
+  display: flex;
+  justify-content: center;
+
+  gap: clamp(16px, 3.5vw, 55px);
+
+  margin: 38px 0 30px;
+}
+
+.stat {
+  background: rgba(50, 20, 10, 0.58);
+  backdrop-filter: blur(8px);
+
+  border: 1px solid rgba(255, 190, 150, 0.35);
+
+  padding: 17px 27px;
+  border-radius: 12px;
+
+  min-width: 130px;
+}
+
+.stat h2 {
+  color: #ff7045;
+  font-size: 40px;
+  margin-bottom: 7px;
+}
+
+.stat p {
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: white;
+}
+
+/* START BUTTON */
+
+.start-button {
+  background: linear-gradient(
+    135deg,
+    #ff7045,
+    #e74724
+  );
+
+  color: white;
+  border: none;
+
+  padding: 18px 48px;
+  border-radius: 8px;
+
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  letter-spacing: 1px;
+
+  transition: 0.3s;
+
+  box-shadow: 0 8px 30px rgba(160, 50, 15, 0.4);
+}
+
+.start-button:hover {
+  transform: translateY(-5px);
+  background: #ff855d;
+
+  box-shadow: 0 12px 35px rgba(255, 90, 45, 0.5);
+}
+
+.scroll-text {
+  margin-top: 25px;
+  color: #ffe0cf;
+  font-size: 12px;
+  letter-spacing: 3px;
+}
+
+/* PLANET STATUS */
+
+.planet-label {
+  position: absolute;
+  bottom: 20px;
+  right: 7%;
+
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: white;
+
+  z-index: 2;
+}
+
+.pulse {
+  display: inline-block;
+
+  width: 9px;
+  height: 9px;
+
+  background: #70ff91;
+  border-radius: 50%;
+
+  margin-right: 8px;
+
+  box-shadow: 0 0 12px #70ff91;
+}
+
+/* MISSION SECTION */
+/* ORIGINAL DESIGN PRESERVED */
+
+.mission-section {
+  padding: 110px 8%;
+
+  background: linear-gradient(
+    135deg,
+    #351a11,
+    #542619,
+    #2b150f
+  );
+
+  text-align: center;
+}
+
+.section-tag {
+  color: #ff8055;
+  letter-spacing: 5px;
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+.section-heading h2 {
+  font-size: 40px;
+  margin-bottom: 25px;
+}
+
+.section-heading > p:last-child {
+  max-width: 750px;
+  margin: auto;
+
+  color: #f0d4c5;
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+/* MISSION CARDS */
+
+.mission-cards {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+
+  gap: 20px;
+  margin-top: 65px;
+}
+
+.mission-card {
+  padding: 35px 22px;
+
+  background: rgba(255, 255, 255, 0.055);
+
+  border: 1px solid rgba(255, 120, 75, 0.35);
+  border-radius: 15px;
+
+  transition: 0.3s;
+}
+
+.mission-card:hover {
+  transform: translateY(-10px);
+
+  background: rgba(255, 112, 69, 0.13);
+  border-color: #ff7045;
+}
+
+.card-number {
+  font-size: 30px;
+  color: #ff7045;
+  font-weight: bold;
+}
+
+.card-icon {
+  font-size: 40px;
+  margin: 18px 0;
+}
+
+.mission-card h3 {
+  font-size: 20px;
+  letter-spacing: 3px;
+  margin-bottom: 18px;
+}
+
+.mission-card p {
+  color: #e6c9b9;
+  line-height: 1.8;
+  font-size: 14px;
+}
+
+/* EXPLORATION SECTION */
+
+.exploration-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  align-items: center;
+  gap: 65px;
+
+  padding: 100px 9%;
+
+  background: #21120e;
+}
+
+.exploration-image {
+  overflow: hidden;
+
+  border-radius: 18px;
+  border: 2px solid rgba(255, 112, 69, 0.45);
+
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.4);
+}
+
+.exploration-image img {
+  display: block;
+
+  width: 100%;
+  height: 450px;
+
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.exploration-image img:hover {
+  transform: scale(1.05);
+}
+
+.exploration-content h2 {
+  font-size: 42px;
+  margin-bottom: 25px;
+}
+
+.exploration-content h2 span {
+  color: #ff7045;
+}
+
+.exploration-content > p:not(.section-tag) {
+  color: #e9cfc0;
+
+  line-height: 1.9;
+  margin-bottom: 18px;
+
+  font-size: 16px;
+}
+
+.exploration-highlight {
+  display: flex;
+  align-items: center;
+
+  gap: 22px;
+  margin-top: 35px;
+  padding: 20px;
+
+  border-left: 4px solid #ff7045;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.exploration-highlight > span {
+  font-size: 48px;
+  color: #ff7045;
+  font-weight: bold;
+}
+
+.exploration-highlight strong {
+  letter-spacing: 2px;
+}
+
+.exploration-highlight p {
+  margin-top: 8px;
+  color: #e9cfc0;
+  font-size: 14px;
+}
+
+/* FOOTER */
+
+footer {
+  padding: 45px 20px;
+
+  text-align: center;
+
+  background: #160b08;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+footer h3 {
+  color: #ff7045;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+}
+
+footer p {
+  font-size: 12px;
+  color: #e2bbaa;
+  letter-spacing: 2px;
+}
+
+footer span {
+  display: block;
+
+  margin-top: 20px;
+
+  font-size: 11px;
+  color: #ff8055;
+  letter-spacing: 3px;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* Tablet / small laptop: 3 cards on top, 2 below */
+@media (min-width: 851px) and (max-width: 1150px) {
+
+  .mission-cards {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .mission-card {
+    grid-column: span 2;
+  }
+
+  .mission-card:nth-child(n + 4) {
+    grid-column: span 3;
+  }
+}
+
+@media (max-width: 850px) {
+
+  .hero {
+    height: auto;
+    min-height: 720px;
+    padding: 30px 0 55px;
+  }
+
+  .hero-content {
+    padding: 35px 20px;
+  }
+
+  .mission-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .mission-card,
+  .mission-card:nth-child(n + 4) {
+    grid-column: auto;
+  }
+
+  .exploration-section {
+    grid-template-columns: 1fr;
+  }
+
+  .exploration-image img {
+    height: 350px;
+  }
+
+  .section-heading h2 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 550px) {
+
+  .navbar {
+    padding: 0 5%;
+    height: 70px;
+  }
+
+  .logo {
+    font-size: 17px;
+    letter-spacing: 1px;
+  }
+
+  .nav-right {
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+
+  .hero {
+    min-height: 700px;
+    background-position: center;
+  }
+
+  .hero h1 {
+    font-size: 39px;
+  }
+
+  .hero-description {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .mission-stats {
+    gap: 10px;
+    margin: 32px 0 28px;
+  }
+
+  .stat {
+    padding: 15px 10px;
+    min-width: 90px;
+  }
+
+  .stat h2 {
+    font-size: 30px;
+  }
+
+  .stat p {
+    font-size: 9px;
+  }
+
+  .start-button {
+    padding: 17px 30px;
+  }
+
+  .planet-label {
+    right: 0;
+    left: 0;
+    text-align: center;
+    font-size: 9px;
+  }
+
+  .mission-section {
+    padding: 75px 6%;
+  }
+
+  .exploration-section {
+    padding: 70px 6%;
+  }
+
+  .exploration-content h2 {
+    font-size: 32px;
+  }
+}
+
+/* SURVIVE / ADVISE / CREW CARD INTERACTION */
+
+.survive-home-card {
+  cursor: pointer;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.survive-home-card:hover {
+  transform: translateY(-8px);
+  border-color: #ff7045;
+}
+
+.survive-home-card:focus-visible {
+  outline: 2px solid #ff956c;
+  outline-offset: 4px;
+}
+
+.card-action {
+  display: block;
+  color: #ff956c;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-top: 18px;
+}
+/* 6 MISSION CARDS: 3 per row on laptops, 2 on tablets, 1 on phones */
+
+.mission-cards {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media (min-width: 851px) and (max-width: 1150px) {
+  .mission-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .mission-card,
+  .mission-card:nth-child(n + 4) {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 850px) {
+  .mission-cards {
+    grid-template-columns: 1fr;
+  }
+}
